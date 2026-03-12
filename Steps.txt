@@ -1,1 +1,94 @@
+Steps to Deploy the Website
+Step 1: Login to Azure Portal
 
+Open the Azure portal:
+
+https://portal.azure.com
+
+Sign in using your Microsoft Azure account.
+------------------------------------------------------------------------------------------------------------------------------------------
+Step 2: Create a Resource Group
+
+Search for Resource Groups in Azure.
+
+Click Create Resource Group.
+
+Enter the following details:
+
+Resource Group Name:
+
+steller-resource
+
+Region:
+
+Central India
+
+Click Review + Create, then click Create.
+------------------------------------------------------------------------------------------------------------------------------------------
+Step 3: Create an Azure App Service
+
+Search for App Services in Azure.
+
+Click Create → Web App.
+
+Fill in the following details:
+
+App Name:
+
+stellermind-webapp
+
+Runtime Stack:
+
+PHP
+
+Operating System:
+
+Linux
+
+Region:
+
+Central India
+
+Click Create to deploy the App Service.
+------------------------------------------------------------------------------------------------------------------------------------------
+Step 4: Prepare the Website Files
+
+Place all project files inside one folder:
+
+stellermind/
+index.php
+css/
+js/
+images/
+
+Compress the folder into a ZIP file:
+
+stellermind.zip
+------------------------------------------------------------------------------------------------------------------------------------------
+Step 5: Upload Website Files
+
+Open the deployment portal:
+
+https://<appname>.scm.azurewebsites.net/ZipDeployUI
+
+Example:
+
+https://stellermind-webapp.scm.azurewebsites.net/ZipDeployUI
+
+Upload the ZIP file containing the project.
+------------------------------------------------------------------------------------------------------------------------------------------
+Step 6: Verify File Deployment
+
+Open the Azure App Service debug console and check the following directory:
+
+/site/wwwroot
+
+Ensure that all project files, including index.php, are present.
+------------------------------------------------------------------------------------------------------------------------------------------
+Step 7: Access the Website
+
+Open the deployed website using the App Service URL:
+
+https://stellermind-webapp.azurewebsites.net
+
+If deployment is successful, the StellerMind website will load in the browser.
